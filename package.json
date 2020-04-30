@@ -7,7 +7,8 @@
     "cheerio": "^0.22.0",
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
-    "npm-run-all": "^4.0.0"
+    "npm-run-all": "^4.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
@@ -24,7 +25,9 @@
     "watch:copy-assets": "cpx 'src/assets/**/*.*' build/assets --watch",
     "build:browserify": "mkdir -p ./build/js && browserify src/js-browserify/download_urls.js -o build/js/bundle.js",
     "watch:browserify": "mkdir -p ./build/js && watchify src/js-browserify/download_urls.js -o build/js/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,5 +38,6 @@
   "bugs": {
     "url": "https://github.com/WorldBrain/Research-Engine/issues"
   },
-  "homepage": "https://github.com/WorldBrain/Research-Engine#readme"
+  "homepage": "https://github.com/WorldBrain/Research-Engine#readme",
+  "snyk": true
 }
