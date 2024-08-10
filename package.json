@@ -4,7 +4,7 @@
   "description": "Worldbrain.io research engine",
   "main": "index.js",
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0",
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
     "npm-run-all": "^4.0.0"
